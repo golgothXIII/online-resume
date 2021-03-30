@@ -11,7 +11,7 @@
   <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
-  <nav class="navbar navbar-expand-lg fixed-top navbar-light" >
+  <nav class="navbar navbar-expand-lg fixed-top navbar-light my-bg-dark" >
     <a class="navbar-brand" href="#">
       <img src="images/mon_logo.svg" width="40" height="40" alt=""/>
     </a>
@@ -29,11 +29,11 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <!-- menu -->
         <ul class="navbar-nav mr-auto">
-          <li class="nav-item my-button" >
-            <a class="my-link nav-link" href="#about-me">A propos de moi</a>
+          <li class="nav-item" >
+            <a class="nav-link" href="#about-me">A propos de moi</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#my-skills">Mes competences</a>
+            <a class="nav-link my-link" href="#my-skills">Mes competences</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#projects">Mes projets & réalisation</a>
@@ -51,19 +51,24 @@
   <header>
   </header>
   <main>
-    <section id="about-me" style="padding-top: 60px">
-      <h2>A propos de moi</h2>
+    <section id="about-me" class="my-bg-light my-first-section my-section" >
+      <div class="row">
+        <h2 class="col-12 text-center" >A propos de moi</h2>
+      </div>
+      <h3>Ludovic GAUTHERON</h3>
+      <h3>Developpeur web / web mobile full stack</h3>
+
     </section>
-    <section id="my-skills">
+    <section id="my-skills" class="my-bg-dark">
       <h2>Mes competences</h2>
     </section>
-    <section id="projects">
+    <section id="projects" class="my-bg-light">
       <h2>Mes projets et réalisations</h2>
     </section>
-    <section id="carrer">
+    <section id="carrer" class="my-bg-dark" >
       <h2>Mon parcours</h2>
     </section>
-    <section id="contact">
+    <section id="contact" class="my-bg-light">
       <h2>Me contacter</h2>
       <br />
       <br />
