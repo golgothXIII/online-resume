@@ -1,20 +1,25 @@
 body {
   font-family: Calibri;
   font-style: italic;
+  font-size: 20px;
 }
 
 .my-bg-light {
-  background-color: #FFFFFF
+  background-color: #fff;
+  color: #2D303B;
+  padding: 10px;
 }
 
 .my-bg-dark {
   background-color: #2D303B;
+  color: #fff;
+  padding: 10px
 }
 
-my-link {
+.my-link {
   color: red;
 }
-my-link:hover {
+.my-link:hover {
   color: #55D7F3;
 }
 
@@ -32,4 +37,58 @@ my-link:hover {
   font-weight: bold;
   border-radius: 20px;
   border: 3px solid #0082A9;
+}
+
+.my-section { 
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+
+.my-first-section {
+  padding-top: 70px;
+}
+
+#my-skills img {
+  width:75px;
+}
+
+.my-section-title {
+  font-weight: bold;
+  font-size: 40px;
+  text-align: center;
+}
+
+.my-section-subtitle {
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.my-red {
+  border: 1px red solid;
+}
+
+.my-carrer-left {
+  border-right: 2px #fff solid;
+  text-align: right;
+  margin-bottom: 5px;
+}
+
+.my-carrer-right {
+  border-left: 1px #fff solid;
+  text-align: left;
+  margin-bottom: 5px;
+}
+
+@media screen and (max-width:768px) {
+  .my-carrer-left {
+    border-left: 3px #fff solid;
+    border-right: none;
+    text-align: left;
+  }
+  .my-carrer-right {
+    border-left: 3px #fff solid;
+    border-right: none;
+    text-align: left;
+
+  }
 }
