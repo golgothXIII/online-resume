@@ -1,7 +1,7 @@
 body {
   font-family: Calibri;
   font-style: italic;
-  font-size: 20px;
+  font-size: 25px;
 }
 
 /* Background style light and dark */
@@ -24,7 +24,7 @@ body {
 }
 
 .my-first-section {
-  padding-top: 70px;
+  padding-top: 90px;
 }
 
 #my-skills img {
@@ -38,13 +38,14 @@ body {
 
 .my-section-title {
   font-weight: bold;
-  font-size: 40px;
+  font-size: 45px;
   text-align: center;
 }
 
 .my-section-subtitle {
   font-weight: bold;
-  font-size: 30px;
+  font-size: 35px;
+  text-decoration: underline;
 }
 
 .my-link {

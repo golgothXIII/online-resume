@@ -1,3 +1,21 @@
+<?php
+/*
+ * Code for send mail to my email.
+*/
+  $retourMail = null;
+  if (isset($_POST['inputMessage']) && isset($_POST['inputEmail'])) {
+      $role = null;
+      $retour = mail('gautheronludovic@gmail.com', 'Envoi depuis la page Contact', $_POST['inputMessage'], 'From: ' . $_POST['inputEmail']);
+      if(!$retour) {
+        $retourMail = "Message envoyé";
+        $role = "success";
+      } else {
+        $retourMail = "Erreur lors de l'envoie du message";
+        $role = "danger";
+      }
+      $retourMail = '<div class="alert alert-' . $role . ' role="alert">' . $retourMail . '</div>';
+    }
+?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -51,6 +69,8 @@
     </nav>
   </header>
   <main class="container">
+    <!-- Section about me -->
+    <!---------------------->
     <section id="about-me" class="my-bg-light my-first-section my-section row" >
         <h2 class="col-12 text-center my-section-title" >A propos de moi</h2>
         <div class="col-sm-4 text-center align-middle" >
@@ -59,12 +79,19 @@
         <div class="col-sm text-center" >
           <h3 class="my-section-subtitle">
             Ludovic GAUTHERON<br />
-            Developpeur web / mobile full stack</h3>
+            Developpeur web / mobile full stack
+          </h3>
         </div>
-        <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum purus erat, tincidunt nec pretium vel, convallis a sem. Cras a lorem turpis. Suspendisse venenatis et justo at malesuada. Donec tortor ante, dictum et dolor at, suscipit vestibulum sem. Donec tristique venenatis turpis quis placerat. Nunc aliquet ut felis vel porttitor. Integer pellentesque, lacus sit amet pulvinar aliquet, arcu magna finibus enim, eu convallis justo mi sit amet metus. Pellentesque sed erat velit. Fusce posuere imperdiet neque ut gravida.
-          Donec a vehicula leo. Ut aliquet ullamcorper ligula, eget cursus magna porta vitae. Nulla pellentesque diam quis ex semper, et scelerisque est placerat. Vestibulum dui lorem, consectetur sit amet purus gravida, sollicitudin suscipit magna. Vestibulum placerat, leo sit amet pretium lacinia, neque neque fringilla massa, ut consequat ligula justo ac lacus. Aenean ut massa nunc. Aliquam pulvinar urna nec purus ornare euismod. Duis dignissim euismod nisl et fringilla. In hendrerit vulputate convallis. Nulla mattis ultricies finibus. Aliquam quis ante molestie, porta ex sed, placerat est. Vivamus egestas magna nisl, ut consequat quam tempor sit amet. Morbi non ante eget velit feugiat tristique. Fusce eget ex ut nunc lacinia condimentum at eget ex. Vivamus vestibulum iaculis nibh a laoreet.</p>
+        <p class="text-justify" style="font-size:25px ">
+          Developpeur de formation, j'ai durant ma carrier doucement basculé vers l'administration systeme.
+          Apres plusieur années ( plus de 10 ans ) loin des lignes de code, et voulant revenir à ma premiere passion,
+          je me suis lancé dans une formation à distance de developpeur web / web mobile.<br />
+          <b>Motivé, passionée je suis la pour réaliser vos besoins et envie.</b>
+        </p>
 
     </section>
+    <!-- Section my skills -->
+    <!----------------------->
     <section id="my-skills" class="my-bg-dark my-section row">
         <h2 class="col-12 text-center my-section-title" >Mes competences</h2>
         <div class="col-3 text-center"><img src="images/html5.svg" /><span class="d-none d-xl-inline">HTML 5</span></div>
@@ -78,31 +105,62 @@
         <div class="col-3 text-center" ><img src="images/github.svg"/><span class="d-none d-xl-inline">GITHUB</span></div>
         <div class="col-3 text-center"><img src="images/mysql.svg" /><span class="d-none d-xl-inline">MYSQL</span></div>
     </section>
+    <!-- Section my projects -->
+    <!------------------------->
     <section id="projects" class="my-bg-light my-section row">
       <h2 class="col-12 text-center my-section-title">Mes projets et réalisations</h2>
+      <div class="container text-center pb-5 pt-3">
+        <h3 class="my-section-subtitle text-center">Un demineur en React.js</h3>
+        <img class="col-10" src="images/minesweeper.jpg" />
+      </div>
     </section>
-    <section id="carrer" class="my-bg-dark my-section row" >
+    <!-- Section my carrer -->
+    <!----------------------->
+    <section id="carrer" class="container my-bg-dark my-section row" >
       <h2 class="col-12 text-center my-section-title">Mon parcours</h2>
       <div class="col-md-6 my-carrer-left" >
-        Octobre 2020 - Aujourd'hui<br />Formation Dévellopeur Web et Web Mobile<br /> STUDI - Formation à distance
+        <p>Octobre 2020 - Aujourd'hui</p>
+        <p>Formation Dévellopeur Web et Web Mobile</p>
+        <p>STUDI - Formation à distance</p>
       </div>
       <div class="col-md-6 d-none d-md-inline my-carrer-right"></div>
       <div class="col-md-6 d-none d-md-inline my-carrer-left"></div>
       <div class="col-md-6 my-carrer-right" >
-        2018
+        <p>2018 - Aujourd'hui</p>
+        <p>Responsable informatique</p>
+        <p>CELSIUS EQUIPEMENT</p>
       </div>
       <div class="col-md-6 my-carrer-left" >
-        1997<br /> DUT Informatique <br />IUT - BELFORT MONTBELIARD
+      <p>2005 - 2018</p>
+        <p>administrateur systeme</p>
+        <p>Armée de l'air</p>
       </div>
       <div class="col-md-6 d-none d-md-inline my-carrer-right"></div>
       <div class="col-md-6 d-none d-md-inline  my-carrer-left"></div>
       <div class="col-md-6 my-carrer-right" >
-        1995<br /> Baccalaureat S<br />Lycée G. EIFFEIL (Dijon)
+        <p>1999 - 2005</p>
+        <p>Développeur / administrateur systeme & BDD</p>
+        <p>Armée de l'air</p>
+      </div>
+      <div class="col-md-6 my-carrer-left" >
+        <p>1997</p>
+        <p>DUT Informatique</p>
+        <p>IUT - BELFORT MONTBELIARD</p>
+      </div>
+      <div class="col-md-6 d-none d-md-inline my-carrer-right"></div>
+      <div class="col-md-6 d-none d-md-inline  my-carrer-left"></div>
+      <div class="col-md-6 my-carrer-right" >
+        <p>1995</p>
+        <p>Baccalaureat S</p>
+        <p>Lycée G. EIFFEIL (Dijon)</p>
       </div>
     </section>
+    <!-- Section contact -->
+    <!--------------------->
     <section id="contact" class="my-bg-light my-section">
       <h2 class="col-12 text-center my-section-title">Me contacter</h2>
-      <form method="post" action="#contact" >
+      <?= $retourMail ?>
+      <form method="post" action="#contact">
         <div class="form-row">
           <div class="form-group col-md-6">
             <label for="inputLastame">Nom</label>
@@ -130,15 +188,5 @@
   <script src="js/jquery-3.6.0.min.js"></script>
   <!-- Bootstrap JavaScript -->
   <script src="js/bootstrap.bundle.min.js"></script>
-<?php
-  if (isset($_POST['inputMessage'])) {
-      echo "salut <br/><br/>";
-      $retour = mail('gautheronludovic@gmail.com', 'Envoi depuis la page Contact', $_POST['inputMessage'], 'From: ' . $_POST['inputEmail']);
-      if($retour)
-        echo '<p>Votre message a été envoyé.</p>';
-      else
-        echo '<p>Erreur.</p>';
-  }
-?>
 </body>
 </html>
