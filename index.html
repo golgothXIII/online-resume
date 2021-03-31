@@ -5,6 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <link rel="icon" type="image/svg+xml" href="images/mon_logo.svg" />
   <!-- Bootstrap css -->
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <!-- My css file-->
@@ -12,12 +13,12 @@
 </head>
 <body>
   <header>
-    <nav class="navbar navbar-expand-lg fixed-top navbar-light my-bg-dark" >
+    <nav class="navbar navbar-expand-lg fixed-top my-bg-dark" >
       <a class="navbar-brand" href="#">
         <img src="images/mon_logo.svg" width="40" height="40" alt=""/>
       </a>
       <button
-        class="navbar-toggler"
+        class="navbar-toggler navbar-dark"
         type="button" 
         data-toggle="collapse"
         data-target="#navbarSupportedContent"
@@ -25,25 +26,25 @@
         aria-expanded="false"
         aria-label="Toggle navigation"
       >
-        <span class="navbar-toggler-icon"></span>
+        <span class="navbar-toggler-icon""></span>
       </button> 
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <!-- menu -->
           <ul class="navbar-nav mr-auto">
-            <li class="nav-item" >
-              <a class="nav-link" href="#about-me">A propos de moi</a>
+            <li class="nav-item my-button" >
+              <a class="nav-link my-link" href="#about-me">A propos de moi</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item my-button">
               <a class="nav-link my-link" href="#my-skills">Mes competences</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#projects">Mes projets & réalisation</a>
+            <li class="nav-item my-button">
+              <a class="nav-link my-link" href="#projects">Mes projets & réalisation</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#carrer">Mon parcours</a>
+            <li class="nav-item my-button">
+              <a class="nav-link my-link" href="#carrer">Mon parcours</a>
             </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#contact">Contact</a>
+          <li class="nav-item my-button">
+            <a class="nav-link my-link text-center" href="#contact">Contact</a>
           </li>
         </ul>
       </div>
@@ -53,7 +54,7 @@
     <section id="about-me" class="my-bg-light my-first-section my-section row" >
         <h2 class="col-12 text-center my-section-title" >A propos de moi</h2>
         <div class="col-sm-4 text-center align-middle" >
-          <img src="images/php.svg" height="200px" width="200px" />
+          <img src="images/ludovic-gautheron.jpg" class="my-profile" />
         </div>
         <div class="col-sm text-center" >
           <h3 class="my-section-subtitle">
@@ -102,6 +103,27 @@
     </section>
     <section id="contact" class="my-bg-light my-section">
       <h2 class="col-12 text-center my-section-title">Me contacter</h2>
+      <form>
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="inputLastame">Nom</label>
+            <input type="text" class="form-control" id="inputLastname" placeholder="Saisir votre nom">
+          </div>  
+          <div class="form-group col-md-6">
+            <label for="inputFirstname">Prénom</label>
+            <input type="text" class="form-control" id="inputFirstname" placeholder="Saisir votre prénom">
+          </div>  
+        </div>
+        <div class="form-group">
+          <label for="inputEmail">Votre adresse mail *</label>
+          <input type="email" class="form-control" id="inputEmail" placeholder="Saisir votre email" required>
+        </div>
+        <div class="form-group">
+          <label for="inputText">Votre demande *</label>
+          <textarea class="form-control" id="inputText" placeholder="Saisir votre demande" rows="4" required></textarea>
+        </div>
+        <button type="submit" class="btn my-button">Envoyer</button>
+      </form>
     </section>
   </main>
   <footer class="my-bg-dark text-center"><h6>Ludovic GAUTHERON @ Golgoth.codeur</h6></footer>

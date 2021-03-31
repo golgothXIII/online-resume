@@ -4,6 +4,8 @@ body {
   font-size: 20px;
 }
 
+/* Background style light and dark */
+/***********************************/
 .my-bg-light {
   background-color: #fff;
   color: #2D303B;
@@ -17,7 +19,7 @@ body {
 }
 
 .my-link {
-  color: red;
+  color: #FFFFFF;;
 }
 .my-link:hover {
   color: #55D7F3;
@@ -28,16 +30,22 @@ body {
   color: #FFFFFF;
   font-weight: bold;
   border-radius: 20px;
-  border: 3px solid #FFFFFF;
+  border-style: solid;
+  border-width: 3px;
+  border-color: #FFFFFF;
+  margin-left: 10px;
+  margin-right: 10px;
+  min-width: 100px;
 }
 
 .my-button:hover {
   background-color: #FFFFFF;
   color: #0082A9;
-  font-weight: bold;
-  border-radius: 20px;
-  border: 3px solid #0082A9;
+  border-color: #0082A9;
 }
+ .my-button:hover .my-link {
+   color: #55D7F3;
+ }
 
 .my-section { 
   padding-top: 10px;
@@ -50,6 +58,11 @@ body {
 
 #my-skills img {
   width:75px;
+}
+
+.my-profile {
+  width: 200px;
+  border-radius: 50%;
 }
 
 .my-section-title {
@@ -79,6 +92,9 @@ body {
   margin-bottom: 5px;
 }
 
+/*
+* Media query for display my carer in one column for the small screen. 
+*/
 @media screen and (max-width:768px) {
   .my-carrer-left {
     border-left: 3px #fff solid;
@@ -89,6 +105,12 @@ body {
     border-left: 3px #fff solid;
     border-right: none;
     text-align: left;
+  }
+}
 
+@media screen and (max-width:992px) {
+  .my-button {
+    margin-top: 5px;
+    margin-bottom: 5px;
   }
 }
