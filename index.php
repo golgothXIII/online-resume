@@ -102,24 +102,24 @@
     </section>
     <section id="contact" class="my-bg-light my-section">
       <h2 class="col-12 text-center my-section-title">Me contacter</h2>
-      <form>
+      <form method="post" action="#contact" >
         <div class="form-row">
           <div class="form-group col-md-6">
             <label for="inputLastame">Nom</label>
-            <input type="text" class="form-control" id="inputLastname" placeholder="Saisir votre nom">
+            <input type="text" class="form-control" id="inputLastname" name="inputLastname" placeholder="Saisir votre nom">
           </div>  
           <div class="form-group col-md-6">
             <label for="inputFirstname">Prénom</label>
-            <input type="text" class="form-control" id="inputFirstname" placeholder="Saisir votre prénom">
+            <input type="text" class="form-control" id="inputFirstname" name="inputFirstname" placeholder="Saisir votre prénom">
           </div>  
         </div>
         <div class="form-group">
           <label for="inputEmail">Votre adresse mail *</label>
-          <input type="email" class="form-control" id="inputEmail" placeholder="Saisir votre email" required>
+          <input type="email" class="form-control" id="inputEmail" name="inputEmail" placeholder="Saisir votre email" required>
         </div>
         <div class="form-group">
-          <label for="inputText">Votre demande *</label>
-          <textarea class="form-control" id="inputText" placeholder="Saisir votre demande" rows="4" required></textarea>
+          <label for="inputMessage">Votre demande *</label>
+          <textarea class="form-control" id="inputMessage" name="inputMessage" placeholder="Saisir votre demande" rows="4" required></textarea>
         </div>
         <button type="submit" class="btn my-button">Envoyer</button>
       </form>
@@ -130,5 +130,15 @@
   <script src="js/jquery-3.6.0.min.js"></script>
   <!-- Bootstrap JavaScript -->
   <script src="js/bootstrap.bundle.min.js"></script>
+<?php
+  if (isset($_POST['inputMessage'])) {
+      echo "salut <br/><br/>";
+      $retour = mail('gautheronludovic@gmail.com', 'Envoi depuis la page Contact', $_POST['inputMessage'], 'From: ' . $_POST['inputEmail']);
+      if($retour)
+        echo '<p>Votre message a été envoyé.</p>';
+      else
+        echo '<p>Erreur.</p>';
+  }
+?>
 </body>
 </html>
